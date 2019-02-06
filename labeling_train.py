@@ -27,7 +27,8 @@ def main():
     if len(sys.argv) > 2 and sys.argv[2].isdigit():
         endIdx = int(sys.argv[2])
 
-    for i in range(max(0, startIdx), min(num_file - 1, endIdx + 1)):
+    print(endIdx)
+    for i in range(max(0, startIdx), min(num_file - 1, endIdx) + 1):
         filename = filelist[i]
         name, extension = os.path.splitext(filename)
         image = Image.open(dir_train + filename)
